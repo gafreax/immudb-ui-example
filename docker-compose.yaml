@@ -1,0 +1,25 @@
+version: '3'
+services: 
+  backend:
+    container_name: backend
+    image: immudb-ui-backend
+    build:
+      context: ./backend
+      dockerfile: ./backend/Dockerfile
+    networks:
+      -  immudb.local 
+    ports:
+      - 8000:8000
+  frontend:
+    container_name: frontend
+    image: immudb-ui-frontend
+    build:
+      context: ./frontend
+      dockerfile: ./frontend/Dockerfile
+    networks:
+      -  immudb.local 
+    ports:
+      - 3000:3000
+networks:
+    immudb.local:
+      driver: bridge 

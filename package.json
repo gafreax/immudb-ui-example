@@ -1,0 +1,24 @@
+{
+    "name": "immudb-ui",
+    "author": "Gabriele Fontana<gafreax@gmail.com>",
+    "license": "Apache-2.0",
+    "version": "1.0.0",
+    "workspaces": [
+        "frontend",
+        "backend"
+    ],
+    "scripts": {
+        "immudb": "docker start immudb || docker run -d -it --rm -p 8080:8080 -p 3322:3322 -p 9497:9497 -p 5432:5432 --name immudb codenotary/immudb:1.3.2",
+        "predev": "npm run immudb",
+        "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    },
+    "eslint": {
+        "files": [
+            "**/src/**/*.ts",
+            "./backend/src/routes/add.ts"
+        ]
+    }
+}

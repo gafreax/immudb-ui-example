@@ -1,0 +1,12 @@
+{
+    "editor.formatOnSave": true,
+    "eslint.format.enable": true,
+    "typescript.format.semicolons": "remove",
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2,
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true
+}
